@@ -12,3 +12,7 @@ input, button{
     font-size: 20px;
 }
 
+button{
+    text-align: center;
+    align-items: center;
+}

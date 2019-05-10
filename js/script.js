@@ -18,9 +18,18 @@ function handleClick() {
         totalElem.textContent = `${runningTotal}`;
         totalElem.style.color = "red";
     }
+    clearInputFields();
 }
 
 function sumInputs(lInput, rInput) {
-    // console.log(`linput is typeof ${typeof lInput}; rinput is typeof ${typeof rInput}`);
-    return parseInt(lInput) + parseInt(rInput);
+    if (!(isNaN(lInput) || isNaN(rInput))) {
+        return parseInt(lInput) + parseInt(rInput);
+    } else{
+        return 0;
+    }
+}
+
+function clearInputFields(){
+    document.getElementById("left").value = "";
+    document.getElementById("right").value = "";
 }
